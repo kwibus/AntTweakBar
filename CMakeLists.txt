@@ -15,18 +15,7 @@ ADD_DEFINITIONS(-D_UNIX)
 add_library(AntTweakBar ${SOURCES})
 target_link_libraries(AntTweakBar GL)
 
-add_executable(TwAdvanced1 examples/TwAdvanced1.cpp)
-target_link_libraries(TwAdvanced1 AntTweakBar GLU glfw)
-
-add_executable(TwSimpleGLFW examples/TwSimpleGLFW.cpp)
-target_link_libraries(TwSimpleGLFW AntTweakBar GLU glfw)
-
-add_executable(TwSimpleGLUT examples/TwSimpleGLUT.cpp)
-target_link_libraries(TwSimpleGLUT AntTweakBar GLU glut)
-
-add_executable(TwSimpleSDL examples/TwSimpleSDL.cpp)
-target_link_libraries(TwSimpleSDL AntTweakBar GLU SDL)
-
-add_executable(TwString examples/TwString.cpp)
-target_link_libraries(TwString AntTweakBar glfw)
+if (AntTweakTools_BUILD_EXAMPLES)
+    add_subdirectory(examples) 
+endif()
 
