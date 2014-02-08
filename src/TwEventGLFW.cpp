@@ -91,6 +91,7 @@ int TW_CALL TwEventKeyGLFW(int glfwKey, int glfwAction)
             break;
         }
     }
+#endif
     // Process key pressed
     if( glfwAction==GLFW_PRESS )
     {

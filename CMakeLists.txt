@@ -15,8 +15,8 @@ ADD_DEFINITIONS(-D_UNIX)
 add_library(AntTweakBar ${SOURCES})
 target_link_libraries(AntTweakBar GL)
 
-set(AntTweakTools_BUILD_EXAMPLES TRUE)
-if (AntTweakTools_BUILD_EXAMPLES)
+Option(AntTweakBar_BUILD_EXAMPLES "Build the AntTweakBarexample programs" ON)
+if (AntTweakBar_BUILD_EXAMPLES)
     add_subdirectory(examples) 
 endif()
 
